@@ -21,11 +21,7 @@ public class CameraController : MonoBehaviour
         Cursor.lockState = CursorLockMode.Locked;//kamerayý ekrana kilitleme
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+   
     private void LateUpdate()
     {
         this.transform.position = Vector3.Lerp(this.transform.position, target.position + offset, Time.deltaTime * 10);
