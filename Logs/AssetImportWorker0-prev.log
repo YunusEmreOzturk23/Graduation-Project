@@ -15,7 +15,7 @@ C:/Users/oztur/Unity/Graduation Project
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-54539
+51121
 Successfully changed project path to: C:/Users/oztur/Unity/Graduation Project
 C:/Users/oztur/Unity/Graduation Project
 [UnityMemory] Configuration Parameters - Can be set up in boot.config
@@ -49,12 +49,12 @@ C:/Users/oztur/Unity/Graduation Project
     "memorysetup-temp-allocator-size-cloud-worker=32768"
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
     "memorysetup-temp-allocator-size-gfx=262144"
-Player connection [21696] Host "[IP] 192.168.1.36 [Port] 0 [Flags] 2 [Guid] 3696326420 [EditorId] 3696326420 [Version] 1048832 [Id] WindowsEditor(7,LAPTOP-TA5FNJUF) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
+Player connection [10116] Host "[IP] 192.168.1.105 [Port] 0 [Flags] 2 [Guid] 3910875548 [EditorId] 3910875548 [Version] 1048832 [Id] WindowsEditor(7,LAPTOP-TA5FNJUF) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
 
-Player connection [21696] Host "[IP] 192.168.1.36 [Port] 0 [Flags] 2 [Guid] 3696326420 [EditorId] 3696326420 [Version] 1048832 [Id] WindowsEditor(7,LAPTOP-TA5FNJUF) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
+Player connection [10116] Host "[IP] 192.168.1.105 [Port] 0 [Flags] 2 [Guid] 3910875548 [EditorId] 3910875548 [Version] 1048832 [Id] WindowsEditor(7,LAPTOP-TA5FNJUF) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
 
 [Physics::Module] Initialized MultithreadedJobDispatcher with 7 workers.
-Refreshing native plugins compatible for Editor in 39.31 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 22.24 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2022.3.21f1 (bf09ca542b87)
 [Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2022.3.21f1/Editor/Data/Resources/UnitySubsystems
@@ -70,53 +70,53 @@ Initialize mono
 Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2022.3.21f1/Editor/Data/Managed'
 Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2022.3.21f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
 Mono config path = 'C:/Program Files/Unity/Hub/Editor/2022.3.21f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56140
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56456
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2022.3.21f1/Editor/Data/PlaybackEngines/AndroidPlayer/UnityEditor.Android.Extensions.dll
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2022.3.21f1/Editor/Data/PlaybackEngines/iOSSupport/UnityEditor.iOS.Extensions.dll
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2022.3.21f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2022.3.21f1/Editor/Data/PlaybackEngines/MetroSupport/UnityEditor.UWP.Extensions.dll
-Registered in 0.027128 seconds.
-- Loaded All Assemblies, in  1.055 seconds
+Registered in 0.024324 seconds.
+- Loaded All Assemblies, in  1.165 seconds
 Native extension for UWP target not found
 Native extension for WindowsStandalone target not found
 [usbmuxd] Start listen thread
 [usbmuxd] Listen thread started
 Native extension for iOS target not found
 Native extension for Android target not found
-Android Extension - Scanning For ADB Devices 689 ms
+Android Extension - Scanning For ADB Devices 790 ms
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  1.638 seconds
-Domain Reload Profiling: 2689ms
-	BeginReloadAssembly (367ms)
+- Finished resetting the current domain, in  1.885 seconds
+Domain Reload Profiling: 3047ms
+	BeginReloadAssembly (301ms)
 		ExecutionOrderSort (0ms)
 		DisableScriptedObjects (0ms)
 		BackupInstance (0ms)
 		ReleaseScriptingObjects (0ms)
 		CreateAndSetChildDomain (2ms)
-	RebuildCommonClasses (79ms)
+	RebuildCommonClasses (94ms)
 	RebuildNativeTypeToScriptingClass (25ms)
-	initialDomainReloadingComplete (178ms)
-	LoadAllAssembliesAndSetupDomain (401ms)
-		LoadAssemblies (360ms)
+	initialDomainReloadingComplete (156ms)
+	LoadAllAssembliesAndSetupDomain (585ms)
+		LoadAssemblies (298ms)
 		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (394ms)
-			TypeCache.Refresh (391ms)
-				TypeCache.ScanAssembly (361ms)
+		AnalyzeDomain (578ms)
+			TypeCache.Refresh (574ms)
+				TypeCache.ScanAssembly (539ms)
 			ScanForSourceGeneratedMonoScriptInfo (1ms)
 			ResolveRequiredComponents (1ms)
-	FinalizeReload (1639ms)
+	FinalizeReload (1886ms)
 		ReleaseScriptCaches (0ms)
 		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (1500ms)
+		SetupLoadedEditorAssemblies (1713ms)
 			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (1023ms)
-			SetLoadedEditorAssemblies (10ms)
+			InitializePlatformSupportModulesInManaged (1133ms)
+			SetLoadedEditorAssemblies (11ms)
 			RefreshPlugins (0ms)
 			BeforeProcessingInitializeOnLoad (6ms)
-			ProcessInitializeOnLoadAttributes (341ms)
-			ProcessInitializeOnLoadMethodAttributes (119ms)
+			ProcessInitializeOnLoadAttributes (402ms)
+			ProcessInitializeOnLoadMethodAttributes (160ms)
 			AfterProcessingInitializeOnLoad (0ms)
 			EditorAssembliesLoaded (0ms)
 		ExecutionOrderSort2 (0ms)
@@ -124,8 +124,8 @@ Domain Reload Profiling: 2689ms
 ========================================================================
 Worker process is ready to serve import requests
 Begin MonoManager ReloadAssembly
-- Loaded All Assemblies, in  1.807 seconds
-Refreshing native plugins compatible for Editor in 6.28 ms, found 3 plugins.
+- Loaded All Assemblies, in  1.956 seconds
+Refreshing native plugins compatible for Editor in 7.29 ms, found 3 plugins.
 Native extension for UWP target not found
 Native extension for WindowsStandalone target not found
 Native extension for iOS target not found
@@ -135,47 +135,47 @@ Package Manager log level set to [2]
 [Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
 [Package Manager] Cannot connect to Unity Package Manager local server
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  1.902 seconds
-Domain Reload Profiling: 3703ms
-	BeginReloadAssembly (462ms)
+- Finished resetting the current domain, in  2.600 seconds
+Domain Reload Profiling: 4549ms
+	BeginReloadAssembly (452ms)
 		ExecutionOrderSort (0ms)
-		DisableScriptedObjects (13ms)
+		DisableScriptedObjects (15ms)
 		BackupInstance (0ms)
 		ReleaseScriptingObjects (0ms)
-		CreateAndSetChildDomain (58ms)
-	RebuildCommonClasses (104ms)
-	RebuildNativeTypeToScriptingClass (25ms)
-	initialDomainReloadingComplete (98ms)
-	LoadAllAssembliesAndSetupDomain (1111ms)
-		LoadAssemblies (918ms)
+		CreateAndSetChildDomain (63ms)
+	RebuildCommonClasses (115ms)
+	RebuildNativeTypeToScriptingClass (63ms)
+	initialDomainReloadingComplete (115ms)
+	LoadAllAssembliesAndSetupDomain (1203ms)
+		LoadAssemblies (849ms)
 		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (499ms)
-			TypeCache.Refresh (447ms)
-				TypeCache.ScanAssembly (409ms)
-			ScanForSourceGeneratedMonoScriptInfo (37ms)
-			ResolveRequiredComponents (11ms)
-	FinalizeReload (1903ms)
+		AnalyzeDomain (636ms)
+			TypeCache.Refresh (561ms)
+				TypeCache.ScanAssembly (501ms)
+			ScanForSourceGeneratedMonoScriptInfo (60ms)
+			ResolveRequiredComponents (10ms)
+	FinalizeReload (2601ms)
 		ReleaseScriptCaches (0ms)
 		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (1497ms)
+		SetupLoadedEditorAssemblies (2072ms)
 			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (88ms)
-			SetLoadedEditorAssemblies (9ms)
+			InitializePlatformSupportModulesInManaged (103ms)
+			SetLoadedEditorAssemblies (10ms)
 			RefreshPlugins (0ms)
-			BeforeProcessingInitializeOnLoad (133ms)
-			ProcessInitializeOnLoadAttributes (1203ms)
-			ProcessInitializeOnLoadMethodAttributes (49ms)
-			AfterProcessingInitializeOnLoad (14ms)
-			EditorAssembliesLoaded (0ms)
+			BeforeProcessingInitializeOnLoad (246ms)
+			ProcessInitializeOnLoadAttributes (1585ms)
+			ProcessInitializeOnLoadMethodAttributes (92ms)
+			AfterProcessingInitializeOnLoad (34ms)
+			EditorAssembliesLoaded (1ms)
 		ExecutionOrderSort2 (0ms)
-		AwakeInstancesAfterBackupRestoration (16ms)
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.12 seconds
-Refreshing native plugins compatible for Editor in 5.81 ms, found 3 plugins.
+		AwakeInstancesAfterBackupRestoration (30ms)
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.17 seconds
+Refreshing native plugins compatible for Editor in 9.57 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 3103 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 32 unused Assets / (57.8 KB). Loaded Objects now: 3585.
-Memory consumption went from 137.1 MB to 137.1 MB.
-Total: 6.686300 ms (FindLiveObjects: 0.464600 ms CreateObjectMapping: 0.233600 ms MarkObjects: 5.742900 ms  DeleteObjects: 0.242100 ms)
+Unloading 3104 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 32 unused Assets / (57.8 KB). Loaded Objects now: 3586.
+Memory consumption went from 137.0 MB to 137.0 MB.
+Total: 8.624000 ms (FindLiveObjects: 0.519900 ms CreateObjectMapping: 0.289600 ms MarkObjects: 7.584300 ms  DeleteObjects: 0.228300 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
@@ -193,9 +193,105 @@ AssetImportParameters requested are different than current active one (requested
   custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
 Received Import Request.
-  Time since last request: 1999415.858022 seconds.
-  path: Assets/Scenes/Scene1.unity
-  artifactKey: Guid(9fc0d4010bbf28b4594072e72b8655ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes/Scene1.unity using Guid(9fc0d4010bbf28b4594072e72b8655ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '76169ddc100d03b89cea61fad9a402e7') in 0.007749 seconds
+  Time since last request: 57526.747658 seconds.
+  path: Assets/character/Textures/Soldier_Body_normal.png
+  artifactKey: Guid(559482ee590479143b4cf91cde4d81f3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/character/Textures/Soldier_Body_normal.png using Guid(559482ee590479143b4cf91cde4d81f3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6b7e7bbca0ae82c83fef042ccb716f4f') in 0.238529 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000112 seconds.
+  path: Assets/character/Textures/Soldier_Body_diffuse.png
+  artifactKey: Guid(4c384de56b2ab28488ee1e295358c357) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/character/Textures/Soldier_Body_diffuse.png using Guid(4c384de56b2ab28488ee1e295358c357) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '652c5e189898e81d3e30b2ca72fadb33') in 0.038774 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000051 seconds.
+  path: Assets/character/Textures/Soldier_head_specular.png
+  artifactKey: Guid(41c8e2458524ae54e9166f0521653ad2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/character/Textures/Soldier_head_specular.png using Guid(41c8e2458524ae54e9166f0521653ad2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '96815ca8cf464f75e730faaaf575163a') in 0.031381 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 8.016018 seconds.
+  path: Assets/character/characterAnımator.controller
+  artifactKey: Guid(1abce64790eb8d04d95e3973bf318dce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/character/characterAnımator.controller using Guid(1abce64790eb8d04d95e3973bf318dce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '690aa710a498ec3f56f9daa1d68d9fb8') in 0.005815 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 550.091722 seconds.
+  path: Assets/character/characteranimasion
+  artifactKey: Guid(f158ab1b55b972348bd7ac3ceaf2fc6e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/character/characteranimasion using Guid(f158ab1b55b972348bd7ac3ceaf2fc6e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '22c990db6e62c95d49105571df03e124') in 0.003725 seconds
 Number of updated asset objects reloaded before import = 0
 Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 0.064108 seconds.
+  path: Assets/character/characteranimasion/Swat@Rifle Idle.fbx
+  artifactKey: Guid(fa6ed4dd3355149459fd342330c58222) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/character/characteranimasion/Swat@Rifle Idle.fbx using Guid(fa6ed4dd3355149459fd342330c58222) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '711db03e0cd98591c6beb23d11343665') in 0.076569 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 143
+========================================================================
+Received Import Request.
+  Time since last request: 0.000042 seconds.
+  path: Assets/character/characteranimasion/Swat@Walk Forward.fbx
+  artifactKey: Guid(a149cd012643dc749816da6bdfbf2450) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/character/characteranimasion/Swat@Walk Forward.fbx using Guid(a149cd012643dc749816da6bdfbf2450) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8bb513e517e51d7eec69be9c75cd4b10') in 0.008366 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 143
+========================================================================
+Received Import Request.
+  Time since last request: 88.414358 seconds.
+  path: Assets/Scenes/Scene1.unity
+  artifactKey: Guid(9fc0d4010bbf28b4594072e72b8655ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Scene1.unity using Guid(9fc0d4010bbf28b4594072e72b8655ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '30d4ea7c0a22bf29016e8bf7def1d29f') in 0.002076 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 59.624202 seconds.
+  path: Assets/character/characteranimasion/Swat@Rifle Idle.fbx
+  artifactKey: Guid(fa6ed4dd3355149459fd342330c58222) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/character/characteranimasion/Swat@Rifle Idle.fbx using Guid(fa6ed4dd3355149459fd342330c58222) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fee6bdc0c37af83dafa2e572b331db65') in 0.011962 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 145
+========================================================================
+Received Import Request.
+  Time since last request: 25.079092 seconds.
+  path: Assets/character/characteranimasion/Swat@Walk Backward.fbx
+  artifactKey: Guid(f27f354569b6f5c499cb59ee65fc95d7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/character/characteranimasion/Swat@Walk Backward.fbx using Guid(f27f354569b6f5c499cb59ee65fc95d7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c23252fda02a59e200f4a46609350683') in 0.007673 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 145
+========================================================================
+Received Import Request.
+  Time since last request: 12.576269 seconds.
+  path: Assets/character/characteranimasion/Swat@Walk Forward.fbx
+  artifactKey: Guid(a149cd012643dc749816da6bdfbf2450) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/character/characteranimasion/Swat@Walk Forward.fbx using Guid(a149cd012643dc749816da6bdfbf2450) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0aa37695eaea1a33d17d44e90bf4e755') in 0.007158 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 145
+========================================================================
+Received Import Request.
+  Time since last request: 5.422462 seconds.
+  path: Assets/character/characteranimasion/Swat@Walk Left.fbx
+  artifactKey: Guid(a0537af052215ad4cae963e85c1b48dc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/character/characteranimasion/Swat@Walk Left.fbx using Guid(a0537af052215ad4cae963e85c1b48dc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2571c4d0e0061f9bc841a994b0819bc8') in 0.015436 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 145
+========================================================================
+Received Import Request.
+  Time since last request: 5.204412 seconds.
+  path: Assets/character/characteranimasion/Swat@Walk Right.fbx
+  artifactKey: Guid(773dc8b1934301f49a7e04749eb108ed) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/character/characteranimasion/Swat@Walk Right.fbx using Guid(773dc8b1934301f49a7e04749eb108ed) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0cd917146cf9ecd2fe660b6aca9b160d') in 0.041826 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 145
