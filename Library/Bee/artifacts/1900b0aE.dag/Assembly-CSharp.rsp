@@ -362,6 +362,7 @@
 "Assets/character/ScriptsCharacter/CameraController.cs"
 "Assets/character/ScriptsCharacter/CharacterController.cs"
 "Assets/item/Gems Ultimate Pack/Scripts/AnimationScript.cs"
+"Assets/Zombie 1/Scripts/ZombieController.cs"
 -langversion:9.0
 
 /deterministic
