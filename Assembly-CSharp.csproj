@@ -61,6 +61,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Zombie 1\Scripts\ZombieController.cs" />
+    <Compile Include="Assets\character\ScriptsCharacter\GunClampingSystem.cs" />
     <Compile Include="Assets\character\ScriptsCharacter\CameraController.cs" />
     <Compile Include="Assets\item\Gems Ultimate Pack\Scripts\AnimationScript.cs" />
     <Compile Include="Assets\character\ScriptsCharacter\CharacterController.cs" />
