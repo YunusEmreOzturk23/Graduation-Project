@@ -16,32 +16,39 @@ public class CameraController : MonoBehaviour
     [SerializeField]
     Transform characterBody;
     // Start is called before the first frame update
+    CharacterController characterHp;
     void Start()
     {
         Cursor.lockState = CursorLockMode.Locked;//kamerayý ekrana kilitleme
+        characterHp=GameObject.Find("Swat").GetComponent<CharacterController>();
     }
 
    
     private void LateUpdate()
     {
-        this.transform.position = Vector3.Lerp(this.transform.position, target.position + offset, Time.deltaTime * 10);
-        mouseX+= Input.GetAxis("Mouse X")*mouseSensivity;
-        mouseY+= Input.GetAxis("Mouse Y")*mouseSensivity;
-        if (mouseY >= 25)
+        if (characterHp.getIsLife()==true)
         {
-            mouseY = 25;
+            this.transform.position = Vector3.Lerp(this.transform.position, target.position + offset, Time.deltaTime * 10);
+            mouseX += Input.GetAxis("Mouse X") * mouseSensivity;
+            mouseY += Input.GetAxis("Mouse Y") * mouseSensivity;
+            if (mouseY >= 25)
+            {
+                mouseY = 25;
+            }
+            if (mouseY <= -40)
+            {
+                mouseY = -40;
+            }
+            transform.eulerAngles = new Vector3(mouseY, mouseX, 0);
+            target.transform.eulerAngles = new Vector3(0, mouseX, 0);
+            //karakter asaðý yukarý eðilme
+            Vector3 temp = this.transform.localEulerAngles;
+            temp.z = 0;
+            temp.y = this.transform.localEulerAngles.y;
+            temp.x = this.transform.localEulerAngles.x + 10;
+            objrot = temp;
+            characterBody.transform.eulerAngles = objrot;
         }
-        if(mouseY<=-40){
-            mouseY = -40;
-        }
-        transform.eulerAngles = new Vector3(mouseY, mouseX, 0);
-        target.transform.eulerAngles = new Vector3(0, mouseX, 0);
-        //karakter asaðý yukarý eðilme
-        Vector3 temp = this.transform.localEulerAngles;
-        temp.z = 0;
-        temp.y = this.transform.localEulerAngles.y;
-        temp.x = this.transform.localEulerAngles.x + 10;
-        objrot = temp;
-        characterBody.transform.eulerAngles = objrot;
+      
     }
 }

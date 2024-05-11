@@ -39,7 +39,6 @@ public class ZombieController : MonoBehaviour
                 zombieNavMesh.isStopped = false;
                 zombieNavMesh.SetDestination(targetPlayer.transform.position);
                 zombieAnim.SetBool("walking", true);
-                zombieAnim.SetBool("punching", false);
                 this.transform.LookAt(targetPlayer.transform.position);
             }
             else
@@ -59,7 +58,7 @@ public class ZombieController : MonoBehaviour
     }
     public void DoDamage()
     {
-       // targetPlayer.GetComponent<CharacterController>().TakeDamage();
+        targetPlayer.GetComponent<CharacterController>().TakeDamage();
     }
     IEnumerator DestroyZombie()
     {
