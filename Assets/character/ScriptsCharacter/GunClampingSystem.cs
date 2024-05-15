@@ -9,22 +9,31 @@ public class GunClampingSystem : MonoBehaviour
     LayerMask zombieLayer;
     // Start is called before the first frame update
     CharacterController hpController;
+    Animator anim;
     void Start()
     {
         camera = Camera.main;
         hpController = this.gameObject.GetComponent<CharacterController>();
+        anim = this.gameObject.GetComponent<Animator>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (hpController.getIsLife()==true && Input.GetMouseButton(0))
+        if (hpController.getIsLife()==true)
         {
-            Shoot();
+            if (Input.GetMouseButton(0))
+            {
+                anim.SetBool("shoot", true);
+            }
+            else if (Input.GetMouseButtonUp(0))
+            {
+                anim.SetBool("shoot", false);
+            }
         }
         
     }
-    void Shoot()
+    public void Shoot()
     {
         Ray ray = camera.ViewportPointToRay(new Vector3(0.5f, 0.5f, 0));
         RaycastHit hit;
