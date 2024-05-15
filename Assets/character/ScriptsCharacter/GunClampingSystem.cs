@@ -10,6 +10,8 @@ public class GunClampingSystem : MonoBehaviour
     // Start is called before the first frame update
     CharacterController hpController;
     Animator anim;
+    [SerializeField]
+    private ParticleSystem muzzleFlash;
     void Start()
     {
         camera = Camera.main;
@@ -35,6 +37,7 @@ public class GunClampingSystem : MonoBehaviour
     }
     public void Shoot()
     {
+        muzzleFlash.Play();
         Ray ray = camera.ViewportPointToRay(new Vector3(0.5f, 0.5f, 0));
         RaycastHit hit;
         if (Physics.Raycast(ray, out hit, Mathf.Infinity, zombieLayer))
