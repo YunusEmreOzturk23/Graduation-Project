@@ -12,6 +12,9 @@ public class GunClampingSystem : MonoBehaviour
     Animator anim;
     [SerializeField]
     private ParticleSystem muzzleFlash;
+    private float gunMagazine=5;// þarjör TR
+    private float ammunition = 10;//cephane -TR
+    private float magazineCapasity=5;
     void Start()
     {
         camera = Camera.main;
@@ -26,7 +29,19 @@ public class GunClampingSystem : MonoBehaviour
         {
             if (Input.GetMouseButton(0))
             {
-                anim.SetBool("shoot", true);
+                if (gunMagazine > 0)
+                {
+                    anim.SetBool("shoot", true);
+                }
+                if (gunMagazine <= 0)
+                {
+                    anim.SetBool("shoot", false);
+                }
+                if (gunMagazine <= 0 && ammunition>0)
+                {
+                    anim.SetBool("changeMagazine", true);
+                    
+                }
             }
             else if (Input.GetMouseButtonUp(0))
             {
@@ -35,14 +50,25 @@ public class GunClampingSystem : MonoBehaviour
         }
         
     }
+    public void MagazineReolading()
+    {
+        ammunition -= magazineCapasity - gunMagazine;
+        gunMagazine = magazineCapasity;
+        anim.SetBool("changeMagazine", false);
+    }
     public void Shoot()
     {
-        muzzleFlash.Play();
-        Ray ray = camera.ViewportPointToRay(new Vector3(0.5f, 0.5f, 0));
-        RaycastHit hit;
-        if (Physics.Raycast(ray, out hit, Mathf.Infinity, zombieLayer))
+        if (gunMagazine>0)
         {
-            hit.collider.gameObject.GetComponent<ZombieController>().TakeDamage();
+            muzzleFlash.Play();
+            Ray ray = camera.ViewportPointToRay(new Vector3(0.5f, 0.5f, 0));
+            RaycastHit hit;
+            if (Physics.Raycast(ray, out hit, Mathf.Infinity, zombieLayer))
+            {
+                hit.collider.gameObject.GetComponent<ZombieController>().TakeDamage();
+            }
+            gunMagazine--;
         }
+       
     }
 }
