@@ -28,6 +28,10 @@ public class CharacterController : MonoBehaviour
             Movement();
         }
     }
+    public float getHP()
+    {
+        return hp;
+    }
     public bool getIsLife()
     {
         return isLife;

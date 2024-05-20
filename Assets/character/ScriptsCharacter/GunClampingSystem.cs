@@ -12,8 +12,8 @@ public class GunClampingSystem : MonoBehaviour
     Animator anim;
     [SerializeField]
     private ParticleSystem muzzleFlash;
-    private float gunMagazine=5;// þarjör TR
-    private float ammunition = 10;//cephane -TR
+    private float gunMagazine=100;// þarjör TR
+    private float ammunition = 250;//cephane -TR
     private float magazineCapasity=5;
     void Start()
     {
@@ -70,5 +70,13 @@ public class GunClampingSystem : MonoBehaviour
             gunMagazine--;
         }
        
+    }
+    public float GetGunMagazine()
+    {
+        return gunMagazine;
+    }
+    public float GetAmmunition()
+    {
+        return ammunition;
     }
 }
