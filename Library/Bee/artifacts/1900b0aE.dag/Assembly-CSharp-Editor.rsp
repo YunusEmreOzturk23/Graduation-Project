@@ -379,6 +379,7 @@
 -analyzer:"C:/Program Files/Unity/Hub/Editor/2022.3.21f1/Editor/Data/Tools/Unity.SourceGenerators/Unity.SourceGenerators.dll"
 "Assets/JMO Assets/Cartoon FX Easy Editor/Editor/CFXEasyEditor.cs"
 "Assets/JMO Assets/WarFX/Editor/CFX_SpawnSystemEditor.cs"
+"Assets/PyroParticles/Prefab/Editor/PyroParticlesEditor.cs"
 -langversion:9.0
 
 /deterministic
