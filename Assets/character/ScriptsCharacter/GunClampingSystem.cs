@@ -13,8 +13,8 @@ public class GunClampingSystem : MonoBehaviour
     [SerializeField]
     private ParticleSystem muzzleFlash;
     private float gunMagazine=100;// þarjör TR
-    private float ammunition = 250;//cephane -TR
-    private float magazineCapasity=5;
+    private float ammunition = 450;//cephane -TR
+    private float magazineCapasity=100;
     void Start()
     {
         camera = Camera.main;

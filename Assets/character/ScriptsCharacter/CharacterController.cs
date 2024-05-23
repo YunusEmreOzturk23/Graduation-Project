@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
+
 
 public class CharacterController : MonoBehaviour
 {
@@ -9,10 +11,13 @@ public class CharacterController : MonoBehaviour
     float characterSpeed;
     private float hp=100;
     private bool isLife;
+    [SerializeField]
+    TextMeshProUGUI stateText;
     void Start()
     {
         anim = this.GetComponent<Animator>();
         isLife = true;
+   
     }
 
     // Update is called once per frame
@@ -22,12 +27,17 @@ public class CharacterController : MonoBehaviour
         {
             isLife = false;
             anim.SetBool("isLife", isLife);
+            stateText.gameObject.SetActive(true);
+            stateText.text = "Oyunu Kaybettin";
+            Time.timeScale = 0;
         }
         if (isLife==true)
         {
             Movement();
         }
+   
     }
+ 
     public float getHP()
     {
         return hp;
