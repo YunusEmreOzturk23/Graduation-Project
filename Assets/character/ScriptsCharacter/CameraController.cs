@@ -17,6 +17,7 @@ public class CameraController : MonoBehaviour
     Transform characterBody;
     // Start is called before the first frame update
     CharacterController characterHp;
+    private bool canControlCamera = true; // Kamera kontrol durumu
     void Start()
     {
         Cursor.lockState = CursorLockMode.Locked;//kamerayý ekrana kilitleme
@@ -26,7 +27,7 @@ public class CameraController : MonoBehaviour
    
     private void LateUpdate()
     {
-        if (characterHp.getIsLife()==true)
+        if (characterHp.getIsLife()==true && canControlCamera)
         {
             this.transform.position = Vector3.Lerp(this.transform.position, target.position + offset, Time.deltaTime * 10);
             mouseX += Input.GetAxis("Mouse X") * mouseSensivity;
@@ -50,5 +51,9 @@ public class CameraController : MonoBehaviour
             characterBody.transform.eulerAngles = objrot;
         }
       
+    }
+    public void SetCanControlCamera(bool value)
+    {
+        canControlCamera = value;
     }
 }

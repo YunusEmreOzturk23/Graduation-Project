@@ -6,6 +6,7 @@ TagManager:
   tags:
   - zombie
   - question
+  - swat
   layers:
   - Default
   - TransparentFX

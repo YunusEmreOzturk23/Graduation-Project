@@ -46,6 +46,10 @@ public class CharacterController : MonoBehaviour
     {
         return isLife;
     }
+    public void IncreaseHP()
+    {
+        hp += 15;
+    }
     public void TakeDamage()
     {
         hp -= Random.Range(5, 10);

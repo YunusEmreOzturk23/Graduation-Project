@@ -15,6 +15,7 @@ public class GunClampingSystem : MonoBehaviour
     private float gunMagazine=100;// þarjör TR
     private float ammunition = 450;//cephane -TR
     private float magazineCapasity=100;
+    private bool canShoot = true; // Ateþ etme durumu
     void Start()
     {
         camera = Camera.main;
@@ -25,7 +26,7 @@ public class GunClampingSystem : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (hpController.getIsLife()==true)
+        if (hpController.getIsLife()==true && canShoot)
         {
             if (Input.GetMouseButton(0))
             {
@@ -48,7 +49,10 @@ public class GunClampingSystem : MonoBehaviour
                 anim.SetBool("shoot", false);
             }
         }
-        
+    }
+    public void SetCanShoot(bool value)
+    {
+        canShoot = value;
     }
     public void MagazineReolading()
     {
@@ -78,5 +82,9 @@ public class GunClampingSystem : MonoBehaviour
     public float GetAmmunition()
     {
         return ammunition;
+    }
+    public void IncreaseAmmunition()
+    {
+        ammunition += 350;
     }
 }
