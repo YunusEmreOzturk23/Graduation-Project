@@ -16,11 +16,19 @@ public class GunClampingSystem : MonoBehaviour
     private float ammunition = 450;//cephane -TR
     private float magazineCapasity=100;
     private bool canShoot = true; // Ateþ etme durumu
+
+    AudioSource voiceSource;
+    
+
+    public AudioClip fireVoice;
+    public AudioClip reloadVoice;
+
     void Start()
     {
         camera = Camera.main;
         hpController = this.gameObject.GetComponent<CharacterController>();
         anim = this.gameObject.GetComponent<Animator>();
+        voiceSource = this.gameObject.GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -56,6 +64,7 @@ public class GunClampingSystem : MonoBehaviour
     }
     public void MagazineReolading()
     {
+        voiceSource.PlayOneShot(reloadVoice);
         ammunition -= magazineCapasity - gunMagazine;
         gunMagazine = magazineCapasity;
         anim.SetBool("changeMagazine", false);
@@ -65,6 +74,18 @@ public class GunClampingSystem : MonoBehaviour
         if (gunMagazine>0)
         {
             muzzleFlash.Play();
+            if (voiceSource == null)
+            {
+                Debug.LogError("Voice source is not assigned.");
+                return;
+            }
+
+            if (fireVoice == null)
+            {
+                Debug.LogError("Fire voice clip is not assigned.");
+                return;
+            }
+            voiceSource.PlayOneShot(fireVoice);
             Ray ray = camera.ViewportPointToRay(new Vector3(0.5f, 0.5f, 0));
             RaycastHit hit;
             if (Physics.Raycast(ray, out hit, Mathf.Infinity, zombieLayer))

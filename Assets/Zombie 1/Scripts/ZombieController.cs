@@ -14,12 +14,17 @@ public class ZombieController : MonoBehaviour
     [SerializeField]
     float attackDistance;
     NavMeshAgent zombieNavMesh;
+    AudioSource voiceSource;
+    [SerializeField]
+    AudioClip attackVoice;
+
     // Start is called before the first frame update
     void Start()
     {
         zombieAnim = this.gameObject.GetComponent<Animator>();
         targetPlayer = GameObject.Find("Swat");
         zombieNavMesh = this.gameObject.GetComponent<NavMeshAgent>();
+        voiceSource = this.gameObject.GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -58,6 +63,7 @@ public class ZombieController : MonoBehaviour
     }
     public void DoDamage()
     {
+        voiceSource.PlayOneShot(attackVoice);
         targetPlayer.GetComponent<CharacterController>().TakeDamage();
     }
     IEnumerator DestroyZombie()
