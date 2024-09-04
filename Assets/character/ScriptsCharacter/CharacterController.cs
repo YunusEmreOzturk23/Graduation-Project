@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
-
+using UnityEngine.SceneManagement;
 
 public class CharacterController : MonoBehaviour
 {
@@ -30,6 +30,7 @@ public class CharacterController : MonoBehaviour
             stateText.gameObject.SetActive(true);
             stateText.text = "Oyunu Kaybettin";
             Time.timeScale = 0;
+            LoadScene("LoginScene");
         }
         if (isLife==true)
         {
@@ -37,7 +38,18 @@ public class CharacterController : MonoBehaviour
         }
    
     }
- 
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.CompareTag("fire"))
+        {
+            hp -= 2;
+        }
+    }
+
+    void LoadScene(string sceneName)
+    {
+        SceneManager.LoadScene(sceneName);
+    }
     public float getHP()
     {
         return hp;
@@ -52,7 +64,7 @@ public class CharacterController : MonoBehaviour
     }
     public void TakeDamage()
     {
-        hp -= Random.Range(5, 10);
+        hp -= Random.Range(3, 5);
     }
     void Movement()
     {
